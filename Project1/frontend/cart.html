@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">ModernShop</a>
+        <div class="nav-links" id="auth-links"></div>
+    </nav>
+    <div class="container">
+        <h2>Your Cart</h2>
+        <div style="background: var(--card-bg); padding: 2rem; border-radius: 12px; margin-top: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div id="cart-items"></div>
+            <div id="checkout-section">
+                <div class="cart-total">Total: <span id="cart-total">$0.00</span></div>
+                <button id="checkout-btn" class="btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

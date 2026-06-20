@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Social</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+        <div class="max-w-3xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">MiniSocial</h1>
+            <div id="auth-section">
+                <button onclick="toggleAuthModal()" class="bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">Login / Register</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto mt-6 p-4">
+        
+        <div id="create-post-section" class="bg-white p-4 rounded-lg shadow-md mb-6 hidden">
+            <textarea id="post-content" rows="3" class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="What's on your mind?"></textarea>
+            <button onclick="createPost()" class="mt-3 bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 float-right">Post</button>
+            <div class="clear-both"></div>
+        </div>
+
+        <div id="feed" class="space-y-6">
+            </div>
+    </main>
+
+    <div id="auth-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex justify-center items-center">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-96">
+            <h2 class="text-2xl font-bold mb-4" id="modal-title">Login</h2>
+            <input type="text" id="username" placeholder="Username" class="w-full border p-2 rounded mb-4">
+            <input type="password" id="password" placeholder="Password" class="w-full border p-2 rounded mb-4">
+            <button onclick="handleAuth()" class="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Submit</button>
+            <p class="mt-4 text-sm text-center cursor-pointer text-blue-500 hover:underline" onclick="toggleAuthMode()">Switch to Register</p>
+            <button onclick="toggleAuthModal()" class="mt-2 w-full bg-gray-300 text-gray-700 p-2 rounded">Close</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

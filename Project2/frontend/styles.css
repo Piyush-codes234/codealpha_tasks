@@ -1,0 +1,7 @@
+/* Custom scrollbar or base overrides if needed */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+.hidden {
+  display: none !important;
+}
